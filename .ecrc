@@ -1,0 +1,11 @@
+{
+	"exclude": [
+		"node_modules",
+		".github",
+		"manifest.webmanifest",
+		"public",
+		"package.json",
+		".stylelintrc",
+		"\\.md$"
+	]
+}

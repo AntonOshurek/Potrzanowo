@@ -1,0 +1,36 @@
+---
+import type { CollectionEntry } from 'astro:content';
+//STYLES
+import './image-block-with-link.scss';
+
+interface Props {
+	data: CollectionEntry<'indexPageLinks'>;
+	height?: number;
+}
+
+const { data, height } = Astro.props;
+---
+
+<section
+	class="image-block-with-link"
+	style={{
+		height: `${height ? height : null}px`,
+	}}
+>
+	<div class=`image-block-with-link__wrap container`>
+		<h2 class=`image-block-with-link__title`>{data.data.title}</h2>
+		<!-- <p class=`image-block-with-link__text`>{data.data.text}</p> -->
+	</div>
+
+	<a href={data.data.linkPath} class="image-block-with-link__link">
+		<span class="visually-hidden">{data.data.linkText}</span>
+	</a>
+
+	<img
+		class="image-block-with-link__image"
+		src={data.data.imagePath}
+		alt=""
+		width="200"
+		height="200"
+	/>
+</section>

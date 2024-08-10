@@ -1,0 +1,23 @@
+---
+import './header.scss';
+import Nav from './nav/nav.astro';
+import NavButton from './nav/nav-button/nav-button.astro';
+---
+
+<header class="header">
+	<div class="header__wrap container">
+		<a class="header__logo-link" href="/">
+			<span class="visually-hidden">Strona główna</span>
+			<img
+				class="header__logo"
+				width="200"
+				height="200"
+				src="./images/logo/logo-black.png"
+				alt="niebieski napis 'Unicorn' z czarnym podpisem 'architecture'"
+			/>
+		</a>
+		<NavButton />
+
+		<Nav />
+	</div>
+</header>

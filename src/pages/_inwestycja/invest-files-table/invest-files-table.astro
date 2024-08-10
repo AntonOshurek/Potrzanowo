@@ -1,0 +1,15 @@
+---
+import { getEntry } from 'astro:content';
+//STYLES
+import './invest-files-table.scss';
+
+const Table = await getEntry('tables', 'files-table');
+
+const { Content } = await Table.render();
+---
+
+<section class="invest-files-table">
+	<div class="invest-files-table__wrap container">
+		<Content />
+	</div>
+</section>

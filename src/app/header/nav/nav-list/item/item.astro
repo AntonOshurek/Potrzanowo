@@ -1,0 +1,21 @@
+---
+interface Props {
+	title: string;
+	path: string;
+}
+
+const { title, path } = Astro.props;
+const isActive = Astro.url.pathname === path;
+---
+
+<li class="nav-list__item">
+	{
+		isActive ? (
+			<a class={`nav-list__link nav-list__link--active`}> {title} </a>
+		) : (
+			<a class={`nav-list__link`} href={path}>
+				{title}
+			</a>
+		)
+	}
+</li>

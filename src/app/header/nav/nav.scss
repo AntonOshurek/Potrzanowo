@@ -1,0 +1,33 @@
+@import '../../styles/variables';
+
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+
+	@media (max-width: $tablet-width) {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: -350%;
+		justify-content: center;
+		transition: all 0.2s ease-in;
+	}
+}
+
+.nav--open {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	padding: 100px 20px 80px;
+	box-shadow: var(--shadow);
+	background-color: var(--bg);
+	transition: all 0.3s ease;
+
+	.nav-list {
+		opacity: 1;
+		transition: all 0.1 ease;
+		pointer-events: all;
+	}
+}

@@ -1,0 +1,24 @@
+---
+import type { CollectionEntry } from 'astro:content';
+//STYLES
+import './text-block.scss';
+
+interface Props {
+	data: CollectionEntry<'textBlocks'>;
+}
+
+const { data } = Astro.props;
+---
+
+<section class="text-block">
+	<div class="text-block__wrap container">
+		<h2 class="text-block__title">
+			{data.data.title}
+		</h2>
+
+		<div class="text-block__items">
+			<p class="text-block__items-text text-block__items-text--left">{data.data.textLeft}</p>
+			<p class="text-block__items-text text-block__items-text--right">{data.data.textRight}</p>
+		</div>
+	</div>
+</section>

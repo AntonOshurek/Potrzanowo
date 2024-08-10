@@ -1,0 +1,37 @@
+@import './variables';
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--bg: #fff;
+	--standart-side-padding: 20px;
+
+	// FONTS
+	--basci-font: 'Open Sans', sans-serif;
+
+	// TEXT
+	--primary-text: #2a2a2a;
+	--secondary-text: #8695a4;
+	--hover-item-color: #5f25ef;
+	--current-item-color: #5f25ef;
+	--navigation-link-color: #fff;
+	--always-white: #fff;
+	--always-dark: #000;
+}
+
+.visually-hidden {
+	position: absolute;
+	overflow: hidden;
+	width: 1px;
+	height: 1px;
+	clip: rect(0 0 0 0);
+}
+
+.container {
+	margin: 0 auto;
+	max-width: $desctope-width;
+}

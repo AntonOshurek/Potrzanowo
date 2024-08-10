@@ -1,0 +1,55 @@
+@import '../../app/styles/variables';
+
+.text-block {
+}
+
+.text-block__wrap {
+	display: grid;
+	justify-items: center;
+	grid-row-gap: 50px;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(2, max-content);
+	padding: 50px var(--standart-side-padding);
+}
+
+.text-block__title {
+	font-family: var(--basci-font);
+	font-weight: 700;
+	font-size: 30px;
+	text-align: center;
+	color: var(--secondary-text);
+}
+
+.text-block__items {
+	// display: flex;
+	// justify-self: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	max-width: 800px;
+	gap: 40px;
+
+	@media (max-width: $mobile-width) {
+		// flex-direction: column;
+		grid-template-columns: 1fr;
+
+		.text-block__items-text {
+			text-align: center;
+		}
+	}
+}
+
+.text-block__items-text {
+	font-family: var(--basci-font);
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 25px;
+	color: var(--secondary-text);
+
+	&--left {
+		text-align: right;
+	}
+
+	&--right {
+		text-align: left;
+	}
+}

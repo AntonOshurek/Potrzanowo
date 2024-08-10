@@ -1,0 +1,18 @@
+---
+import { getEntry } from 'astro:content';
+//STYLES
+import './main.scss';
+//COMPONENTS
+import TextWithImageGbBlock from '../../../shared/text-with-image-bg-block/text-with-image-bg-block.astro';
+import ImageBgBlock from '../../../shared/image-bg-block/image-bg-block.astro';
+
+//CONTENT
+const banner = await getEntry('imageBlocks', 'lokalizacja-banner');
+---
+
+<main class="main">
+	<TextWithImageGbBlock data={banner} height={600} />
+
+	<ImageBgBlock imagePath="./images/lokalizacja/Potrzanowo_9.webp" />
+	<ImageBgBlock imagePath="./images/lokalizacja/Potrzanowo_10.webp" />
+</main>

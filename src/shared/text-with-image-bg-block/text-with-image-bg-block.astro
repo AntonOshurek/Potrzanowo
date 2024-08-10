@@ -1,0 +1,30 @@
+---
+import type { CollectionEntry } from 'astro:content';
+//STYLES
+import './text-with-image-bg-block.scss';
+
+interface Props {
+	data: CollectionEntry<'imageBlocks'>;
+	height?: number;
+}
+
+const { data, height } = Astro.props;
+---
+
+<section
+	class="text-with-image-bg-block"
+	style={{
+		height: `${height ? height : null}px`,
+	}}
+>
+	<div class=`text-with-image-bg-block__wrap container`>
+		<h2 class=`text-with-image-bg-block__title`>{data.data.imageTitle}</h2>
+		<img
+			class="text-with-image-bg-block__image"
+			src={data.data.imagePath}
+			alt={data.data.imageTitle}
+			width="200"
+			height="200"
+		/>
+	</div>
+</section>

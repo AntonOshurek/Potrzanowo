@@ -1,0 +1,14 @@
+---
+//STYLES
+import './image-bg-block.scss';
+
+interface Props {
+	imagePath: string;
+}
+
+const { imagePath } = Astro.props;
+---
+
+<section class="image-bg-block">
+	<img class="image-bg-block__image" src={imagePath} alt="" width="200" height="200" />
+</section>

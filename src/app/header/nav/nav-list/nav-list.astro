@@ -1,0 +1,13 @@
+---
+//STYLES
+import './nav-list.scss';
+//COMPONENTS
+import Item from './item/item.astro';
+---
+
+<ul class="nav-list">
+	<Item title="Inwestycja" path={'/inwestycja'} />
+	<Item title="Lokalizacja" path={'/lokalizacja'} />
+	<Item title="Aktywności" path={'/aktywnosci'} />
+	<Item title="Kontakt" path={'/kontakt'} />
+</ul>

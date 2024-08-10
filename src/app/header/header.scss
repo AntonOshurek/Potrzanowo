@@ -1,0 +1,33 @@
+@import '../styles/variables';
+
+.header {
+	position: absolute;
+	z-index: $z-index-header;
+	padding: 20px var(--standart-side-padding);
+	width: 100%;
+	background-color: transparent;
+}
+
+.header__wrap {
+	display: grid;
+	align-items: flex-end;
+	grid-template-columns: 1fr;
+	gap: 40px;
+}
+
+.header__logo-link {
+	position: fixed;
+	top: 5px;
+	z-index: $z-index-nav-button;
+	cursor: pointer;
+
+	@media (max-width: $tablet-width) {
+		top: 20px;
+	}
+}
+
+.header__logo {
+	width: 60px;
+	height: 60px;
+	object-fit: contain;
+}

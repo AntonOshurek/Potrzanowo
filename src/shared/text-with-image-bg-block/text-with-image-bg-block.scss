@@ -1,0 +1,31 @@
+.text-with-image-bg-block {
+	position: relative;
+}
+
+.text-with-image-bg-block__wrap {
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	padding: 100px var(--standart-side-padding);
+	height: 100%;
+	gap: 20px;
+}
+
+.text-with-image-bg-block__title {
+	font-family: var(--basci-font);
+	font-weight: 300;
+	font-style: italic;
+	font-size: 30px;
+	text-align: right;
+	color: var(--always-white);
+}
+
+.text-with-image-bg-block__image {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}

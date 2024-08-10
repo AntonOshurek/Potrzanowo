@@ -1,0 +1,28 @@
+---
+import { getEntry } from 'astro:content';
+//STYLES
+import './main.scss';
+//COMPONENTS
+import TextWithImageGbBlock from '../../../shared/text-with-image-bg-block/text-with-image-bg-block.astro';
+import TextBlock from '../../../shared/text-block/text-block.astro';
+import ImageBgBlock from '../../../shared/image-bg-block/image-bg-block.astro';
+import InvestFilesTable from '../invest-files-table/invest-files-table.astro';
+
+//CONTENT
+const banner = await getEntry('imageBlocks', 'investment-banner');
+const description = await getEntry('textBlocks', 'investment-description');
+---
+
+<main class="main">
+	<TextWithImageGbBlock data={banner} height={700} />
+
+	<TextBlock data={description} />
+
+	<ImageBgBlock imagePath="./images/inwestycja/Potrzanowo_2.webp" />
+	<ImageBgBlock imagePath="./images/inwestycja/Potrzanowo_3.webp" />
+	<ImageBgBlock imagePath="./images/inwestycja/Potrzanowo_4.webp" />
+	<ImageBgBlock imagePath="./images/inwestycja/Potrzanowo_5.webp" />
+	<ImageBgBlock imagePath="./images/inwestycja/Potrzanowo_6.webp" />
+	<InvestFilesTable />
+	<ImageBgBlock imagePath="./images/inwestycja/Potrzanowo_8.webp" />
+</main>
