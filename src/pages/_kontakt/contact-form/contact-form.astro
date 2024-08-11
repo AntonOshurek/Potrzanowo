@@ -14,7 +14,7 @@ import './contact-form.scss';
 			</label>
 
 			<label class="contact-form__label">
-				<span class="contact-form__input-title">Nazwisko:</span>
+				<span class="contact-form__input-title">*Nazwisko:</span>
 				<input class="contact-form__input" type="text" name="surname" />
 			</label>
 
@@ -29,7 +29,7 @@ import './contact-form.scss';
 			</label>
 
 			<label class="contact-form__label contact-form__label--textarea">
-				<span class="contact-form__input-title">Wiadomośc:</span>
+				<span class="contact-form__input-title">*Wiadomośc:</span>
 				<textarea class="contact-form__input contact-form__textarea" rows="5" name="message"
 				></textarea>
 			</label>
@@ -81,13 +81,15 @@ import './contact-form.scss';
 			const email = formData.get('email');
 			const telephone = formData.get('telephone');
 			const name = formData.get('name');
+			const surname = formData.get('surname');
+			const message = formData.get('message');
 			const zgoda1 = formData.get('zgoda_rodo1');
 			const zgoda2 = formData.get('zgoda_rodo2');
 
 			let isError = false;
 			let errorMessage = '';
 
-			if (!email || !telephone || !name) {
+			if (!email || !telephone || !name || !surname || !message) {
 				errorMessage = errorMessage + 'Pola zaznaczonę gwiazdką * są obowiązkowe.';
 				isError = true;
 			}
@@ -104,6 +106,8 @@ import './contact-form.scss';
 				} else {
 					alert(errorMessage);
 				}
+
+				return;
 			} else {
 				errorMessageBlock?.classList.remove('contact-form__error-message--show');
 				errorMessage = '';
