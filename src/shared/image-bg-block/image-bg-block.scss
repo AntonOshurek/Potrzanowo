@@ -1,4 +1,5 @@
 .image-bg-block {
+	position: relative;
 	height: max-content;
 	min-width: 100%;
 }
@@ -8,4 +9,15 @@
 	height: max-content;
 	min-width: 100%;
 	object-fit: contain;
+}
+
+.image-bg-block__link {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	color: transparent;
+	background-color: transparent;
 }

@@ -5,21 +5,14 @@ import './image-block-with-link.scss';
 
 interface Props {
 	data: CollectionEntry<'indexPageLinks'>;
-	height?: number;
 }
 
-const { data, height } = Astro.props;
+const { data } = Astro.props;
 ---
 
-<section
-	class="image-block-with-link"
-	style={{
-		height: `${height ? height : null}px`,
-	}}
->
+<section class="image-block-with-link">
 	<div class=`image-block-with-link__wrap container`>
 		<h2 class=`image-block-with-link__title`>{data.data.title}</h2>
-		<!-- <p class=`image-block-with-link__text`>{data.data.text}</p> -->
 	</div>
 
 	<a href={data.data.linkPath} class="image-block-with-link__link">
