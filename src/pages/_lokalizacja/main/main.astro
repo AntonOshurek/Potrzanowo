@@ -13,6 +13,11 @@ const banner = await getEntry('imageBlocks', 'lokalizacja-banner');
 <main class="main">
 	<TextWithImageGbBlock data={banner} height={600} />
 
-	<ImageBgBlock imagePath="/images/lokalizacja/Potrzanowo_9.webp" />
+	<ImageBgBlock
+		imagePath="/images/lokalizacja/Potrzanowo_9.webp"
+		withLink={true}
+		linkPath="https://maps.app.goo.gl/f7BATpNTqwpziBzC6"
+		linkText="zobacz lokalizacje w google maps"
+	/>
 	<ImageBgBlock imagePath="/images/lokalizacja/Potrzanowo_10.webp" />
 </main>
