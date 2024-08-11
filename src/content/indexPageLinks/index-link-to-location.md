@@ -1,7 +1,7 @@
 ---
 title: Lokalizacja
 text: Dowidz się o inwestycji
-linkPath : /overview
+linkPath : /lokalizacja
 linkText: overview
 imagePath: /images/lokalizacja/Potrzanowo_8.webp
 ---
