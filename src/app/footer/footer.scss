@@ -10,6 +10,17 @@
 	flex-direction: column;
 	align-items: flex-end;
 	justify-content: flex-end;
+
+	@media (max-width: $mobile-width) {
+		.footer__title,
+		.footer__address {
+			font-size: 18px;
+		}
+
+		.footer__additional-info {
+			font-size: 14px;
+		}
+	}
 }
 
 .footer__title {
