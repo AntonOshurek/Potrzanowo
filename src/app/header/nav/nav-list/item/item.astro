@@ -6,9 +6,6 @@ interface Props {
 
 const { title, path } = Astro.props;
 const isActive = Astro.url.pathname === path;
-
-console.log(`Astro.url.pathname - ${Astro.url.pathname}`);
-console.log(`path - ${path}`);
 ---
 
 <li class="nav-list__item">

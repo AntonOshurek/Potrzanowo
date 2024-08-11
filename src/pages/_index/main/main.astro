@@ -1,18 +1,20 @@
 ---
-import { getCollection } from 'astro:content';
+import { getEntry } from 'astro:content';
 //STYLES
 import './main.scss';
 //COMPONENTS
 import ImageBlockWithLink from '../../../shared/image-block-with-link/image-block-with-link.astro';
 
 //CONTENT
-const allIndexLink = await getCollection('indexPageLinks');
+const investmentlink = await getEntry('indexPageLinks', 'index-link-to-investment');
+const locationlink = await getEntry('indexPageLinks', 'index-link-to-location');
+const activitylink = await getEntry('indexPageLinks', 'index-link-to-activity');
+const contactlink = await getEntry('indexPageLinks', 'index-link-to-contact');
 ---
 
 <main class="main">
-	{
-		allIndexLink.map((item) => {
-			return <ImageBlockWithLink data={item} height={500} />;
-		})
-	}
+	<ImageBlockWithLink data={investmentlink} />
+	<ImageBlockWithLink data={locationlink} />
+	<ImageBlockWithLink data={activitylink} />
+	<ImageBlockWithLink data={contactlink} />
 </main>
