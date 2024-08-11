@@ -17,13 +17,17 @@ require './mailer/Exception.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$name = htmlspecialchars($_POST['name']);
+	$surname = htmlspecialchars($_POST['surname']);
 	$email = htmlspecialchars($_POST['email']);
+	$telephone = htmlspecialchars($_POST['telephone']);
 	$message = htmlspecialchars($_POST['message']);
 
 	$email_body = "This is the HTML message body <b>in bold!</b>" . "\n";
-	$email_body .= "Name: " . $name . "\n";
-	$email_body .= "Email: " . $email . "\n";
-	$email_body .= "Message: " . $message . "\n";
+	$email_body .= "Imię: " . $name . "\n";
+	$email_body .= "Nazwisko: " . $surname . "\n";
+	$email_body .= "Adres e-mail: " . $email . "\n";
+	$email_body .= "Numer telefonu: " . $telephone . "\n";
+	$email_body .= "Wiadomośc: " . $message . "\n";
 
 	//Create an instance; passing `true` enables exceptions
 	$mail = new PHPMailer(true);
