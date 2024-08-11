@@ -1,3 +1,5 @@
+@import '../../../app/styles/variables';
+
 .contact-form {
 	padding: 100px var(--standart-side-padding);
 }
@@ -22,8 +24,29 @@
 .contact-form__form {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	width: min-content;
+	width: man-content;
+	max-width: 550px;
 	gap: 15px;
+
+	@media (max-width: $mobile-width) {
+		grid-template-columns: 1fr;
+
+		.contact-form__label--textarea {
+			grid-column: 1;
+		}
+
+		.contact-form__rodo-fieldset {
+			grid-column: 1;
+		}
+
+		.contact-form__submit-button {
+			grid-column: 1;
+		}
+
+		.contact-form__rodo-box-title {
+			font-size: 12px;
+		}
+	}
 }
 
 .contact-form__label {
@@ -57,7 +80,7 @@
 	border: 1px solid var(--secondary-text);
 	border-radius: 5px;
 	padding: 5px 10px;
-	width: 250px;
+	width: 100%;
 	font-family: var(--basci-font);
 	font-weight: 300;
 	font-size: 18px;
@@ -114,7 +137,7 @@
 .contact-form__rodo-box-title {
 	font-family: var(--basci-font);
 	font-weight: 300;
-	font-size: 16px;
+	font-size: 14px;
 	text-align: left;
 	text-transform: capitalize;
 	color: rgba(255, 255, 255, 0.5);
