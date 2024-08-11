@@ -5,15 +5,54 @@ import './contact-form.scss';
 
 <section class="contact-form">
 	<div class="contact-form__wrap container">
+		<h2 class="contact-form__title">Napisz do nas</h2>
+
 		<form class="contact-form__form">
 			<label class="contact-form__label">
-				<span class="contact-form__input-title">email:</span>
-				<input class="contact-form__input" type="email" />
-			</label>
-			<label class="contact-form__label">
-				<span class="contact-form__input-title">Imie:</span>
+				<span class="contact-form__input-title">Imię:</span>
 				<input class="contact-form__input" type="text" />
 			</label>
+
+			<label class="contact-form__label">
+				<span class="contact-form__input-title">Nazwisko:</span>
+				<input class="contact-form__input" type="text" />
+			</label>
+
+			<label class="contact-form__label">
+				<span class="contact-form__input-title">Adres e-mail:</span>
+				<input class="contact-form__input" type="email" />
+			</label>
+
+			<label class="contact-form__label">
+				<span class="contact-form__input-title">Numer telefonu:</span>
+				<input class="contact-form__input" type="text" />
+			</label>
+
+			<label class="contact-form__label contact-form__label--textarea">
+				<span class="contact-form__input-title">Wiadomośc:</span>
+				<textarea class="contact-form__input contact-form__textarea" rows="5"></textarea>
+			</label>
+
+			<fieldset class="contact-form__rodo-fieldset">
+				<legend class="visually-hidden">Zgoda RODO</legend>
+
+				<label class="contact-form__rodo-label">
+					<span class="contact-form__rodo-box-title"
+						>Wyrażam zgodę na przetwarzanie moich danych osobowych przez Modra2 Sp. z o.o i ESTATE
+						POINT, w celach marketingu produktów i usług.</span
+					>
+					<input type="checkbox" name="zgoda_rodo1" class="contact-form__checkbox" />
+				</label>
+
+				<label class="contact-form__rodo-label">
+					<span class="contact-form__rodo-box-title"
+						>Wyrażam zgodę na zautomatyzowane przetwarzanie moich danych osobowych, w tym
+						profilowanie, Modra2 Sp. z o.o i ESTATE POINT.</span
+					>
+					<input type="checkbox" name="zgoda_rodo1" class="contact-form__checkbox" />
+				</label>
+			</fieldset>
+
 			<button class="contact-form__submit-button" type="button">Poproś o kontakt</button>
 		</form>
 	</div>
