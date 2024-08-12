@@ -1,0 +1,110 @@
+---
+import { getEntry } from 'astro:content';
+//STYLES
+import './main.scss';
+//COMPONENTS
+import ImageBgBlock from '../../../shared/image-bg-block/image-bg-block.astro';
+
+//CONTENT
+const PrivacyPolicy = await getEntry('privacypolicy', 'privacy-policy');
+const { Content } = await PrivacyPolicy.render();
+---
+
+<main class="main">
+	<ImageBgBlock imagePath="/images/inwestycja/Potrzanowo_2.webp" />
+	<div class="container main__wrap">
+		<Content />
+	</div>
+</main>
+
+<style>
+	:root {
+		--primary-text: #333333;
+		--secondary-text: #555555;
+		--link-color: #1a73e8;
+		--link-hover-color: #0c47b7;
+		--background-color: #ffffff;
+		--container-background: #f9f9f9;
+		--border-color: #dddddd;
+		--blockquote-background: #f0f0f0;
+		--code-background: #f5f5f5;
+	}
+
+	div {
+		font-size: 16px;
+		color: var(--secondary-text);
+		font-family: var(--basci-font);
+		line-height: 1.6;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: var(--primary-text);
+		margin-bottom: 16px;
+		font-family: var(--basci-font);
+	}
+
+	p {
+		margin-bottom: 16px;
+		text-align: justify;
+	}
+
+	a {
+		color: var(--link-color);
+		text-decoration: none;
+		transition: color 0.3s ease;
+	}
+
+	a:hover {
+		color: var(--link-hover-color);
+		text-decoration: underline;
+	}
+
+	ul,
+	ol {
+		padding-left: 20px;
+		margin-bottom: 16px;
+	}
+
+	ul li,
+	ol li {
+		margin-bottom: 8px;
+	}
+
+	blockquote {
+		padding: 10px 20px;
+		margin: 20px 0;
+		background-color: var(--blockquote-background);
+		border-left: 4px solid var(--link-color);
+		font-style: italic;
+	}
+
+	code {
+		background-color: var(--code-background);
+		padding: 2px 4px;
+		border-radius: 4px;
+		font-family: 'Courier New', Courier, monospace;
+	}
+
+	pre {
+		background-color: var(--code-background);
+		padding: 16px;
+		border-radius: 8px;
+		overflow-x: auto;
+		font-family: 'Courier New', Courier, monospace;
+	}
+
+	@media (max-width: 768px) {
+		.main__wrap {
+			padding: 16px;
+		}
+
+		div {
+			font-size: 14px;
+		}
+	}
+</style>

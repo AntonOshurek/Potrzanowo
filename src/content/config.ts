@@ -35,9 +35,17 @@ const tablesCollection = defineCollection({
 	})
 });
 
+const privacyPolicyCollection = defineCollection({
+	type: 'content',
+	schema: z.object({
+
+	})
+});
+
 export const collections = {
 	imageBlocks: imageBlocksCollection,
 	textBlocks: textBlocksCollection,
 	indexPageLinks: indexLinksCollection,
-	tables: tablesCollection
+	tables: tablesCollection,
+	privacypolicy: privacyPolicyCollection
 }

@@ -29,7 +29,7 @@ import './contact-form.scss';
 			</label>
 
 			<label class="contact-form__label contact-form__label--textarea">
-				<span class="contact-form__input-title">*Wiadomośc:</span>
+				<span class="contact-form__input-title">*Wiadomość:</span>
 				<textarea class="contact-form__input contact-form__textarea" rows="5" name="message"
 				></textarea>
 			</label>
@@ -39,18 +39,11 @@ import './contact-form.scss';
 
 				<label class="contact-form__rodo-label">
 					<span class="contact-form__rodo-box-title"
-						>Wyrażam zgodę na przetwarzanie moich danych osobowych przez Modra2 Sp. z o.o i ESTATE
-						POINT, w celach marketingu produktów i usług.</span
-					>
-					<input type="checkbox" name="zgoda_rodo1" class="contact-form__checkbox" />
-				</label>
-
-				<label class="contact-form__rodo-label">
-					<span class="contact-form__rodo-box-title"
-						>Wyrażam zgodę na zautomatyzowane przetwarzanie moich danych osobowych, w tym
-						profilowanie, Modra2 Sp. z o.o i ESTATE POINT.</span
-					>
-					<input type="checkbox" name="zgoda_rodo2" class="contact-form__checkbox" />
+						>Wyrażam zgodę na przetwarzanie moich danych osobowych przez Unicorn Consulting sp. z
+						o.o., w celach marketingu produktów i usług. Wyrażam zgodę na zautomatyzowane
+						przetwarzanie moich danych osobowych, w tym profilowanie, Unicorn Consulting sp. z o.o.
+					</span>
+					<input type="checkbox" name="zgoda_rodo" class="contact-form__checkbox" />
 				</label>
 			</fieldset>
 
@@ -59,6 +52,8 @@ import './contact-form.scss';
 				<div class="contact-form__error-message">error here</div>
 			</div>
 		</form>
+
+		<a class="contact-form__privacy-link" href="/polityka-prywatnosci">Polityka prywatności</a>
 	</div>
 </section>
 
@@ -83,8 +78,7 @@ import './contact-form.scss';
 			const name = formData.get('name');
 			const surname = formData.get('surname');
 			const message = formData.get('message');
-			const zgoda1 = formData.get('zgoda_rodo1');
-			const zgoda2 = formData.get('zgoda_rodo2');
+			const zgoda = formData.get('zgoda_rodo');
 
 			let isError = false;
 			let errorMessage = '';
@@ -94,7 +88,7 @@ import './contact-form.scss';
 				isError = true;
 			}
 
-			if (!zgoda1 || !zgoda2) {
+			if (!zgoda) {
 				errorMessage = errorMessage + ' Przed wysłaniem wiadomości prosimy o wyraenie zgody RODO.';
 				isError = true;
 			}
