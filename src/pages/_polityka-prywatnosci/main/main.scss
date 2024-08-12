@@ -1,0 +1,9 @@
+.main {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 50px;
+}
+
+.main__wrap {
+	padding: 50px 20px;
+}

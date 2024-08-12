@@ -24,7 +24,7 @@
 .contact-form__form {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	width: man-content;
+	width: max-content;
 	max-width: 550px;
 	gap: 15px;
 
@@ -188,4 +188,12 @@
 		opacity: 1;
 		pointer-events: all;
 	}
+}
+
+.contact-form__privacy-link {
+	font-family: var(--basci-font);
+	font-weight: 300;
+	font-size: 18px;
+	text-align: right;
+	color: var(--always-white);
 }
