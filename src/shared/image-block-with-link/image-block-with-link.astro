@@ -12,7 +12,7 @@ const { data } = Astro.props;
 
 <section class="image-block-with-link">
 	<div class=`image-block-with-link__wrap container`>
-		<h2 class=`image-block-with-link__title`>{data.data.title}</h2>
+		<h2 class=`visually-hidden`>{data.data.title}</h2>
 	</div>
 
 	<a href={data.data.linkPath} class="image-block-with-link__link">
