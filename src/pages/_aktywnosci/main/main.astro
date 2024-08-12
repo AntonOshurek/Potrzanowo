@@ -13,7 +13,8 @@ const description = await getEntry('textBlocks', 'activity-description');
 ---
 
 <main class="main">
-	<TextWithImageGbBlock data={banner} height={600} />
+	<!-- <TextWithImageGbBlock data={banner} height={600} /> -->
+	<ImageBgBlock imagePath={banner.data.imagePath} />
 
 	<TextBlock data={description} />
 

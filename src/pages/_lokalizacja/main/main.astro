@@ -11,7 +11,9 @@ const banner = await getEntry('imageBlocks', 'lokalizacja-banner');
 ---
 
 <main class="main">
-	<TextWithImageGbBlock data={banner} height={600} />
+	<!-- <TextWithImageGbBlock data={banner} height={600} /> -->
+
+	<ImageBgBlock imagePath={banner.data.imagePath} />
 
 	<ImageBgBlock
 		imagePath="/images/lokalizacja/Potrzanowo_9.webp"
