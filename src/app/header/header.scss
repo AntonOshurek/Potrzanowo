@@ -3,7 +3,7 @@
 .header {
 	position: absolute;
 	z-index: $z-index-header;
-	padding: 20px var(--standart-side-padding);
+	padding: 30px var(--standart-side-padding);
 	width: 100%;
 	background-color: transparent;
 }
@@ -27,7 +27,7 @@
 }
 
 .header__logo {
-	width: 60px;
-	height: 60px;
+	width: 80px;
+	height: 80px;
 	object-fit: contain;
 }
