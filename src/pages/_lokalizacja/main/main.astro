@@ -3,9 +3,11 @@ import { getEntry } from 'astro:content';
 //STYLES
 import './main.scss';
 //COMPONENTS
+import TextBlock from '../../../shared/text-block/text-block.astro';
 import ImageBgBlock from '../../../shared/image-bg-block/image-bg-block.astro';
 
 //CONTENT
+const description = await getEntry('textBlocks', 'location-description');
 const banner = await getEntry('imageBlocks', 'lokalizacja-banner');
 const imageBgBlock9 = await getEntry('imageBlocks', 'potrzanowo-9');
 const imageBgBlock10 = await getEntry('imageBlocks', 'potrzanowo-10');
@@ -17,6 +19,8 @@ const imageBgBlock10 = await getEntry('imageBlocks', 'potrzanowo-10');
 		title={banner.data.blockTitle}
 		alt={banner.data.imageAlt}
 	/>
+
+	<TextBlock data={description} />
 
 	<ImageBgBlock
 		imagePath={imageBgBlock9.data.imagePath}
