@@ -60,7 +60,9 @@ import './contact-form.scss';
 <script>
 	const email = () => {
 		const form = document.querySelector('.contact-form__form');
-		const submitButton = document.querySelector('.contact-form__submit-button');
+		const submitButton = document.querySelector(
+			'.contact-form__submit-button',
+		) as HTMLButtonElement;
 		const errorMessageBlock = document.querySelector('.contact-form__error-message');
 
 		if (!form) {
@@ -107,6 +109,11 @@ import './contact-form.scss';
 				errorMessage = '';
 			}
 
+			if (submitButton instanceof HTMLButtonElement) {
+				submitButton.textContent = 'Wysyłamy...';
+				submitButton.disabled = true;
+			}
+
 			const response = await fetch('/send-email.php', {
 				method: 'POST',
 				body: formData,
@@ -118,6 +125,7 @@ import './contact-form.scss';
 				}
 			} else {
 				if (errorMessageBlock) {
+					submitButton.disabled = false;
 					errorMessageBlock.classList.add('contact-form__error-message--show');
 					errorMessageBlock.textContent = 'Błąd wysłania widomości. Spróbuje jeszcze raz.';
 				}
