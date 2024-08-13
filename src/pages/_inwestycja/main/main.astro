@@ -42,12 +42,21 @@ const imageBgBlockProjection1 = await getEntry('imageBlocks', 'rzut-1');
 		title={imageBgBlock3.data.blockTitle}
 	/>
 
-	<ImageBgBlock
-		imagePath={imageBgBlockProjection0.data.imagePath}
-		alt={imageBgBlockProjection0.data.imageAlt}
-		title={imageBgBlockProjection0.data.blockTitle}
-		showTitle={true}
-	/>
+	<div class="container">
+		<ImageBgBlock
+			imagePath={imageBgBlockProjection0.data.imagePath}
+			alt={imageBgBlockProjection0.data.imageAlt}
+			title={imageBgBlockProjection0.data.blockTitle}
+			showTitle={true}
+		/>
+
+		<ImageBgBlock
+			imagePath={imageBgBlockProjection1.data.imagePath}
+			alt={imageBgBlockProjection1.data.imageAlt}
+			title={imageBgBlockProjection1.data.blockTitle}
+			showTitle={true}
+		/>
+	</div>
 
 	<ImageBgBlock
 		imagePath={imageBgBlock4.data.imagePath}
@@ -65,13 +74,6 @@ const imageBgBlockProjection1 = await getEntry('imageBlocks', 'rzut-1');
 		imagePath={imageBgBlock6.data.imagePath}
 		alt={imageBgBlock6.data.imageAlt}
 		title={imageBgBlock6.data.blockTitle}
-	/>
-
-	<ImageBgBlock
-		imagePath={imageBgBlockProjection1.data.imagePath}
-		alt={imageBgBlockProjection1.data.imageAlt}
-		title={imageBgBlockProjection1.data.blockTitle}
-		showTitle={true}
 	/>
 
 	<InvestFilesTable />
