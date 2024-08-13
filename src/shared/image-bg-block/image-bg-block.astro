@@ -4,18 +4,21 @@ import './image-bg-block.scss';
 
 interface Props {
 	imagePath: string;
-	withLink?: boolean;
+	title: string;
+	alt?: string;
 	linkText?: string;
 	linkPath?: string;
 }
 
-const { imagePath, withLink, linkText, linkPath } = Astro.props;
+const { imagePath, linkText, linkPath, title, alt } = Astro.props;
 ---
 
 <section class="image-bg-block">
-	<img class="image-bg-block__image" src={imagePath} alt="" width="200" height="200" />
+	<h2 class="visually-hidden">{title}</h2>
+	<img class="image-bg-block__image" src={imagePath} alt={alt} width="200" height="200" />
+
 	{
-		withLink && (
+		linkPath && (
 			<a class="image-bg-block__link" href={linkPath} target="_blank">
 				<span class="visually-hidden">{linkText}</span>
 			</a>

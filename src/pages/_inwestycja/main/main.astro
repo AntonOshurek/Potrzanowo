@@ -3,7 +3,6 @@ import { getEntry } from 'astro:content';
 //STYLES
 import './main.scss';
 //COMPONENTS
-import TextWithImageGbBlock from '../../../shared/text-with-image-bg-block/text-with-image-bg-block.astro';
 import TextBlock from '../../../shared/text-block/text-block.astro';
 import ImageBgBlock from '../../../shared/image-bg-block/image-bg-block.astro';
 import InvestFilesTable from '../invest-files-table/invest-files-table.astro';
@@ -14,18 +13,45 @@ const description = await getEntry('textBlocks', 'investment-description');
 ---
 
 <main class="main">
-	<!-- <TextWithImageGbBlock data={banner} height={700} /> -->
-	<ImageBgBlock imagePath={banner.data.imagePath} />
+	<ImageBgBlock imagePath={banner.data.imagePath} title="" />
 
 	<TextBlock data={description} />
 
-	<ImageBgBlock imagePath="/images/inwestycja/Potrzanowo_2.webp" />
-	<ImageBgBlock imagePath="/images/inwestycja/Potrzanowo_3.webp" />
-	<ImageBgBlock imagePath="/images/inwestycja/Potrzanowo_4.webp" />
-	<ImageBgBlock imagePath="/images/inwestycja/Potrzanowo_5.webp" />
-	<ImageBgBlock imagePath="/images/inwestycja/Potrzanowo_6.webp" />
+	<ImageBgBlock
+		imagePath="/images/inwestycja/Potrzanowo_2.webp"
+		alt={'Wizualizacja nowoczesnego, dwukondygnacyjnego domu w zabudowie szeregowej z cegły. Na pierwszym planie znajduje się wejście do jednego z segmentów, przed którym stoi mężczyzna. Kobieta z rowerem zbliża się do wejścia. W tle widać ogród z dwoma bawiącymi się dziećmi, a także bujną roślinność i drzewa. Budynki mają strome dachy z wieloma kominami oraz okna dachowe, co nadaje im nowoczesny, ale jednocześnie klasyczny wygląd.'}
+		title=""
+	/>
+
+	<ImageBgBlock
+		imagePath="/images/inwestycja/Potrzanowo_3.webp"
+		title=""
+		alt={'Wizualizacja tylniej części nowoczesnych domów jednorodzinnych dwulokalowych w Potrzanowie. Budynki mają dwuspadowe dachy pokryte dachówką ceramiczną i elegancką elewację z płytki klinkierowej. Przed domami znajdują się przestronne ogródki z tarasami, na jednym z nich siedzą dwie osoby, ciesząc się spokojem otoczenia. Na trawniku bawi się dziecko z piłką. Otaczająca zieleń, bujne trawy i drzewa podkreślają sielski, wiejski charakter inwestycji.'}
+	/>
+
+	<ImageBgBlock
+		imagePath="/images/inwestycja/Potrzanowo_4.webp"
+		title={''}
+		alt={'Wizualizacja tarasu przy jednym z domów w inwestycji w Potrzanowie. Na tarasie znajdują się trzy osoby: jedna stoi, a dwie siedzą na sofie i rozmawiają. Przed nimi stoi stół z owocami i napojami. Otaczająca taras bujna roślinność, w tym wysokie trawy ozdobne, podkreśla spokojną, naturalną atmosferę miejsca. Na trawniku przed tarasem leży pies, ciesząc się sielskim otoczeniem.'}
+	/>
+
+	<ImageBgBlock
+		imagePath="/images/inwestycja/Potrzanowo_5.webp"
+		title=""
+		alt={'Techniczny rysunek aksonometryczny przedstawiający przekrój i widok zewnętrzny budynku w inwestycji w Potrzanowie. Obrazek zawiera opisy kluczowych elementów budynku, takich jak ceramiczna dachówka płaska Creaton, ogrzewanie podłogowe na całej powierzchni domu, 20 cm izolacji ze styropianu elewacyjnego, okna FAKRO, płytka klinkierowa Elastolith, blacha na rąbek RAL 7024 oraz pompa ciepła. Rysunek ukazuje również izolację, okna oraz możliwość instalacji rolet.'}
+	/>
+
+	<ImageBgBlock
+		imagePath="/images/inwestycja/Potrzanowo_6.webp"
+		title=""
+		alt={'Widok z lotu ptaka na malowniczą okolicę w Potrzanowie, z jeziorami i lasami w tle. W centralnej części zdjęcia widać sześć domów w zabudowie szeregowej, oznaczonych numerami od 01 do 06. Domy znajdują się w pobliżu jeziora, otoczone polami i łąkami. W oddali rozciągają się lasy, tworząc spokojną i naturalną scenerię.'}
+	/>
 
 	<InvestFilesTable />
 
-	<ImageBgBlock imagePath="/images/inwestycja/Potrzanowo_7.webp" />
+	<ImageBgBlock
+		imagePath="/images/inwestycja/Potrzanowo_7.webp"
+		title=""
+		alt={'Widok z lotu ptaka na wiejski krajobraz w Potrzanowie. W dolnej części zdjęcia widać kilka domów otoczonych drzewami i ogrodami. W tle rozciągają się szerokie pola uprawne i łąki, które tworzą mozaikę różnokolorowych połaci ziemi. Jesienne kolory drzew kontrastują z zielenią pól, a w oddali widoczne są inne gospodarstwa i lasy.'}
+	/>
 </main>
