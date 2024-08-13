@@ -4,7 +4,8 @@ const imageBlocksCollection = defineCollection({
 	type: 'content',
 	schema: z.object({
 		imagePath: z.string(),
-		imageTitle: z.string()
+		blockTitle: z.string(),
+		imageAlt: z.string(),
 	})
 });
 
@@ -21,10 +22,10 @@ const indexLinksCollection = defineCollection({
 	type: 'content',
 	schema: z.object({
 		title: z.string(),
-		text: z.string(),
 		linkPath: z.string(),
 		linkText: z.string(),
-		imagePath: z.string()
+		imagePath: z.string(),
+		imageAlt: z.string(),
 	})
 });
 

@@ -3,23 +3,31 @@ import { getEntry } from 'astro:content';
 //STYLES
 import './main.scss';
 //COMPONENTS
-import TextWithImageGbBlock from '../../../shared/text-with-image-bg-block/text-with-image-bg-block.astro';
 import ImageBgBlock from '../../../shared/image-bg-block/image-bg-block.astro';
 
 //CONTENT
 const banner = await getEntry('imageBlocks', 'lokalizacja-banner');
+const imageBgBlock9 = await getEntry('imageBlocks', 'potrzanowo-9');
+const imageBgBlock10 = await getEntry('imageBlocks', 'potrzanowo-10');
 ---
 
 <main class="main">
-	<!-- <TextWithImageGbBlock data={banner} height={600} /> -->
-
-	<ImageBgBlock imagePath={banner.data.imagePath} />
+	<ImageBgBlock
+		imagePath={banner.data.imagePath}
+		title={banner.data.blockTitle}
+		alt={banner.data.imageAlt}
+	/>
 
 	<ImageBgBlock
-		imagePath="/images/lokalizacja/Potrzanowo_9.webp"
-		withLink={true}
+		imagePath={imageBgBlock9.data.imagePath}
 		linkPath="https://maps.app.goo.gl/f7BATpNTqwpziBzC6"
 		linkText="zobacz lokalizacje w google maps"
+		title={imageBgBlock9.data.blockTitle}
+		alt={imageBgBlock9.data.imageAlt}
 	/>
-	<ImageBgBlock imagePath="/images/lokalizacja/Potrzanowo_10.webp" />
+	<ImageBgBlock
+		imagePath={imageBgBlock10.data.imagePath}
+		title={imageBgBlock10.data.blockTitle}
+		alt={imageBgBlock10.data.imageAlt}
+	/>
 </main>

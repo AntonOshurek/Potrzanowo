@@ -3,21 +3,33 @@ import { getEntry } from 'astro:content';
 //STYLES
 import './main.scss';
 //COMPONENTS
-import TextWithImageGbBlock from '../../../shared/text-with-image-bg-block/text-with-image-bg-block.astro';
 import TextBlock from '../../../shared/text-block/text-block.astro';
 import ImageBgBlock from '../../../shared/image-bg-block/image-bg-block.astro';
 
 //CONTENTs
 const banner = await getEntry('imageBlocks', 'activity-banner');
 const description = await getEntry('textBlocks', 'activity-description');
+const imageBgBlock12 = await getEntry('imageBlocks', 'potrzanowo-12');
+const imageBgBlock13 = await getEntry('imageBlocks', 'potrzanowo-13');
 ---
 
 <main class="main">
-	<!-- <TextWithImageGbBlock data={banner} height={600} /> -->
-	<ImageBgBlock imagePath={banner.data.imagePath} />
+	<ImageBgBlock
+		imagePath={banner.data.imagePath}
+		title={banner.data.blockTitle}
+		alt={banner.data.imageAlt}
+	/>
 
 	<TextBlock data={description} />
 
-	<ImageBgBlock imagePath="/images/aktywnosci/Potrzanowo_12.webp" />
-	<ImageBgBlock imagePath="/images/aktywnosci/Potrzanowo_13.webp" />
+	<ImageBgBlock
+		imagePath={imageBgBlock12.data.imagePath}
+		title={imageBgBlock12.data.blockTitle}
+		alt={imageBgBlock12.data.imageAlt}
+	/>
+	<ImageBgBlock
+		imagePath={imageBgBlock13.data.imagePath}
+		title={imageBgBlock13.data.blockTitle}
+		alt={imageBgBlock13.data.imageAlt}
+	/>
 </main>

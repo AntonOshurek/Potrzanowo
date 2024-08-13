@@ -8,10 +8,15 @@ import ImageBgBlock from '../../../shared/image-bg-block/image-bg-block.astro';
 //CONTENT
 const PrivacyPolicy = await getEntry('privacypolicy', 'privacy-policy');
 const { Content } = await PrivacyPolicy.render();
+const imageBgBlock2 = await getEntry('imageBlocks', 'potrzanowo-2');
 ---
 
 <main class="main">
-	<ImageBgBlock imagePath="/images/inwestycja/Potrzanowo_2.webp" />
+	<ImageBgBlock
+		imagePath={imageBgBlock2.data.imagePath}
+		title={imageBgBlock2.data.blockTitle}
+		alt={imageBgBlock2.data.imageAlt}
+	/>
 	<div class="container main__wrap">
 		<Content />
 	</div>
@@ -33,7 +38,7 @@ const { Content } = await PrivacyPolicy.render();
 	div {
 		font-size: 16px;
 		color: var(--secondary-text);
-		font-family: var(--basci-font);
+		font-family: var(--basic-font);
 		line-height: 1.6;
 	}
 
@@ -45,7 +50,7 @@ const { Content } = await PrivacyPolicy.render();
 	h6 {
 		color: var(--primary-text);
 		margin-bottom: 16px;
-		font-family: var(--basci-font);
+		font-family: var(--basic-font);
 	}
 
 	p {

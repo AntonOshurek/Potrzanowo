@@ -42,10 +42,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 		//hello@potrzanowo.pl
 		//Recipients
-		$mail->setFrom("", "potrzanowo");
-		$mail->addAddress("", "formularz kontaktowy");     //Add a recipient
-		$mail->addAddress("", "formularz kontaktowy");
-		$mail->addAddress("", "formularz kontaktowy");
+		$mail->setFrom("", "Potrzanowo.pl");
+		$mail->addAddress("", "");     //Add a recipient
+		$mail->addAddress("", "");
+		$mail->addAddress("", "");
 		//Content
 		$mail->isHTML(true);                                  //Set email format to HTML
 		$mail->Subject = "Email from potrzanowo.pl email form";

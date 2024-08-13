@@ -11,7 +11,10 @@ const isActive = Astro.url.pathname === path;
 <li class="nav-list__item">
 	{
 		isActive ? (
-			<a class={`nav-list__link nav-list__link--active`}> {title} </a>
+			<a class={`nav-list__link nav-list__link--active`} href={path}>
+				{' '}
+				{title}{' '}
+			</a>
 		) : (
 			<a class={`nav-list__link`} href={path}>
 				{title}
