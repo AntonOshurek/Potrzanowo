@@ -1,7 +1,23 @@
 .image-bg-block {
 	position: relative;
+	display: grid;
+	grid-template-columns: 1fr;
 	height: max-content;
 	min-width: 100%;
+}
+
+.image-bg-block__wrap {
+	grid-row-start: 2;
+	padding: 0 var(--standart-side-padding);
+	width: 100%;
+}
+
+.image-bg-block__title {
+	font-family: var(--basci-font);
+	font-weight: 300;
+	font-size: 18px;
+	text-align: right;
+	color: var(--primary-text);
 }
 
 .image-bg-block__image {

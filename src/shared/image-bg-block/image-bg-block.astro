@@ -8,13 +8,23 @@ interface Props {
 	alt?: string;
 	linkText?: string;
 	linkPath?: string;
+	showTitle?: boolean;
 }
 
-const { imagePath, linkText, linkPath, title, alt } = Astro.props;
+const { imagePath, linkText, linkPath, title, alt, showTitle } = Astro.props;
 ---
 
 <section class="image-bg-block">
-	<h2 class="visually-hidden">{title}</h2>
+	{
+		showTitle ? (
+			<div class="image-bg-block__wrap container">
+				<h2 class="image-bg-block__title">{title}</h2>
+			</div>
+		) : (
+			<h2 class="visually-hidden">{title}</h2>
+		)
+	}
+
 	<img class="image-bg-block__image" src={imagePath} alt={alt} width="200" height="200" />
 
 	{
