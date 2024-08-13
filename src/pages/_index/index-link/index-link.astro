@@ -1,0 +1,23 @@
+---
+import type { CollectionEntry } from 'astro:content';
+//STYLES
+import './index-link.scss';
+
+interface Props {
+	data: CollectionEntry<'indexPageLinks'>;
+}
+
+const { data } = Astro.props;
+---
+
+<section class="index-link">
+	<div class=`index-link__wrap container`>
+		<h2 class=`visually-hidden`>{data.data.title}</h2>
+	</div>
+
+	<a href={data.data.linkPath} class="index-link__link">
+		<span class="visually-hidden">{data.data.linkText}</span>
+	</a>
+
+	<img class="index-link__image" src={data.data.imagePath} alt="" width="200" height="200" />
+</section>

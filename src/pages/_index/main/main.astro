@@ -3,7 +3,7 @@ import { getEntry } from 'astro:content';
 //STYLES
 import './main.scss';
 //COMPONENTS
-import ImageBlockWithLink from '../../../shared/image-block-with-link/image-block-with-link.astro';
+import IndexLink from '../index-link/index-link.astro';
 
 //CONTENT
 const investmentlink = await getEntry('indexPageLinks', 'index-link-to-investment');
@@ -13,8 +13,8 @@ const contactlink = await getEntry('indexPageLinks', 'index-link-to-contact');
 ---
 
 <main class="main">
-	<ImageBlockWithLink data={investmentlink} />
-	<ImageBlockWithLink data={locationlink} />
-	<ImageBlockWithLink data={activitylink} />
-	<ImageBlockWithLink data={contactlink} />
+	<IndexLink data={investmentlink} />
+	<IndexLink data={locationlink} />
+	<IndexLink data={activitylink} />
+	<IndexLink data={contactlink} />
 </main>
