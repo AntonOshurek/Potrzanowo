@@ -9,25 +9,27 @@ import ImageBgBlock from '../../../shared/image-bg-block/image-bg-block.astro';
 //CONTENTs
 const banner = await getEntry('imageBlocks', 'activity-banner');
 const description = await getEntry('textBlocks', 'activity-description');
+const imageBgBlock12 = await getEntry('imageBlocks', 'potrzanowo-12');
+const imageBgBlock13 = await getEntry('imageBlocks', 'potrzanowo-13');
 ---
 
 <main class="main">
 	<ImageBgBlock
 		imagePath={banner.data.imagePath}
-		title="Idealne miejsce do relaksu i rekreacji"
-		alt={"Zdjęcie z lotu ptaka przedstawiające jezioro z piaszczystą plażą otoczoną zielonymi drzewami i krzewami. Na plaży wypoczywają ludzie, a na jeziorze widać kilka małych łódek. Wzdłuż plaży biegnie ścieżka, a obok znajdują się budynki i działki. W prawym dolnym rogu obrazu znajduje się tekst: 'Idealne miejsce do relaksu i rekreacji'."}
+		title={banner.data.blockTitle}
+		alt={banner.data.imageAlt}
 	/>
 
 	<TextBlock data={description} />
 
 	<ImageBgBlock
-		imagePath="/images/aktywnosci/Potrzanowo_12.webp"
-		title="Mapa z aktywnościami"
-		alt={'Zdjęcie z lotu ptaka przedstawiające mapę okolic miejscowości Potrzanowo. Na mapie zaznaczone są kluczowe lokalizacje: przedszkole (1,7 km), szkoła podstawowa (3,2 km), plaża (0,5 km), stadnina koni (1 km), jezioro Maciejak, jezioro Włókna oraz droga na Poznań (196). Mapa ukazuje także drogi dojazdowe do Potrzanowa oraz pobliskie tereny leśne i pola.'}
+		imagePath={imageBgBlock12.data.imagePath}
+		title={imageBgBlock12.data.blockTitle}
+		alt={imageBgBlock12.data.imageAlt}
 	/>
 	<ImageBgBlock
-		imagePath="/images/aktywnosci/Potrzanowo_13.webp"
-		title="Aktywności na jeziorze"
-		alt={'Spokojne jezioro otoczone bujną zielenią, zalesione wzgórza w tle. Na wodzie widoczna jest mała łódka z dwoma osobami, które płyną po jeziorze. Na pierwszym planie, po obu stronach kadru, znajdują się wysokie drzewa, które częściowo zasłaniają widok na jezioro.'}
+		imagePath={imageBgBlock13.data.imagePath}
+		title={imageBgBlock13.data.blockTitle}
+		alt={imageBgBlock13.data.imageAlt}
 	/>
 </main>

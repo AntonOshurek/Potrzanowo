@@ -1,0 +1,5 @@
+---
+imagePath: /images/inwestycja/Potrzanowo_2.webp
+blockTitle: Przyroda na wyciągnięcie ręki.
+imageAlt: Wizualizacja nowoczesnego, dwukondygnacyjnego domu w zabudowie szeregowej z cegły. Na pierwszym planie znajduje się wejście do jednego z segmentów, przed którym stoi mężczyzna. Kobieta z rowerem zbliża się do wejścia. W tle widać ogród z dwoma bawiącymi się dziećmi, a także bujną roślinność i drzewa. Budynki mają strome dachy z wieloma kominami oraz okna dachowe, co nadaje im nowoczesny, ale jednocześnie klasyczny wygląd.
+---

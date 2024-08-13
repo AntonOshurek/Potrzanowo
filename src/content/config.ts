@@ -4,7 +4,8 @@ const imageBlocksCollection = defineCollection({
 	type: 'content',
 	schema: z.object({
 		imagePath: z.string(),
-		imageTitle: z.string()
+		blockTitle: z.string(),
+		imageAlt: z.string(),
 	})
 });
 

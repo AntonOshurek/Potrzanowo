@@ -7,21 +7,27 @@ import ImageBgBlock from '../../../shared/image-bg-block/image-bg-block.astro';
 
 //CONTENT
 const banner = await getEntry('imageBlocks', 'lokalizacja-banner');
+const imageBgBlock9 = await getEntry('imageBlocks', 'potrzanowo-9');
+const imageBgBlock10 = await getEntry('imageBlocks', 'potrzanowo-10');
 ---
 
 <main class="main">
-	<ImageBgBlock imagePath={banner.data.imagePath} title="" />
+	<ImageBgBlock
+		imagePath={banner.data.imagePath}
+		title={banner.data.blockTitle}
+		alt={banner.data.imageAlt}
+	/>
 
 	<ImageBgBlock
-		imagePath="/images/lokalizacja/Potrzanowo_9.webp"
+		imagePath={imageBgBlock9.data.imagePath}
 		linkPath="https://maps.app.goo.gl/f7BATpNTqwpziBzC6"
 		linkText="zobacz lokalizacje w google maps"
-		title=""
-		alt={'Widok z lotu ptaka na mapę okolicy Potrzanowa, przedstawiający sieć dróg i odległości do pobliskich miejscowości. Na mapie oznaczone są następujące odległości: Rogoźno (16,6 km), Wągrowiec (23,8 km), Murowana Goślina (18,9 km), Oborniki (30,8 km) oraz Poznań (42,8 km). W tle widoczne są jeziora, lasy i pola, tworzące malowniczy krajobraz regionu.'}
+		title={imageBgBlock9.data.blockTitle}
+		alt={imageBgBlock9.data.imageAlt}
 	/>
 	<ImageBgBlock
-		imagePath="/images/lokalizacja/Potrzanowo_10.webp"
-		title=""
-		alt={"Zbliżenie na znak uliczny z nazwą 'ul. Włókna' przymocowany do słupa, który jest częściowo obrośnięty bluszczem. W tle widoczny jest gęsty, zielony las, co nadaje miejscu naturalny i spokojny charakter."}
+		imagePath={imageBgBlock10.data.imagePath}
+		title={imageBgBlock10.data.blockTitle}
+		alt={imageBgBlock10.data.imageAlt}
 	/>
 </main>

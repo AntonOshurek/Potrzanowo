@@ -1,4 +1,5 @@
 ---
 imagePath: /images/inwestycja/Potrzanowo_1_txt.webp
-imageTitle: Twój dom nad jeziorem Włókna.
+blockTitle: Twój dom nad jeziorem Włókna.
+imageAlt: test
 ---
