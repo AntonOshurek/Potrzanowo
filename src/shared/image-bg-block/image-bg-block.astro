@@ -25,7 +25,14 @@ const { imagePath, linkText, linkPath, title, alt, showTitle } = Astro.props;
 		)
 	}
 
-	<img class="image-bg-block__image" src={imagePath} alt={alt} width="200" height="200" />
+	<img
+		class="image-bg-block__image"
+		src={imagePath}
+		alt={alt}
+		width="200"
+		height="200"
+		loading="lazy"
+	/>
 
 	{
 		linkPath && (
