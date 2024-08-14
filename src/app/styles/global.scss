@@ -36,3 +36,9 @@
 	margin: 0 auto;
 	max-width: $desctope-width;
 }
+
+.container-with-paddings {
+	margin: 0 auto;
+	padding: 0 var(--standart-side-padding);
+	max-width: $desctope-width;
+}
