@@ -7,6 +7,7 @@ import IndexLink from '../index-link/index-link.astro';
 
 //CONTENT
 const investmentlink = await getEntry('indexPageLinks', 'index-link-to-investment');
+const investmentlink2 = await getEntry('indexPageLinks', 'index-link-to-investment-2');
 const locationlink = await getEntry('indexPageLinks', 'index-link-to-location');
 const activitylink = await getEntry('indexPageLinks', 'index-link-to-activity');
 const contactlink = await getEntry('indexPageLinks', 'index-link-to-contact');
@@ -14,6 +15,7 @@ const contactlink = await getEntry('indexPageLinks', 'index-link-to-contact');
 
 <main class="main">
 	<IndexLink data={investmentlink} />
+	<IndexLink data={investmentlink2} />
 	<IndexLink data={locationlink} />
 	<IndexLink data={activitylink} />
 	<IndexLink data={contactlink} />
