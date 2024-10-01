@@ -37,3 +37,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
 <link rel="icon" href=`/favicon.svg` />
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0E4KBFF0PP"></script>
+<script is:inline>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+	gtag('config', 'G-0E4KBFF0PP');
+</script>
