@@ -25,7 +25,7 @@
 
 .footer__title {
 	font-family: var(--basic-font);
-	font-weight: 300;
+	font-weight: 100;
 	font-size: 25px;
 	text-align: right;
 	color: var(--always-white);
@@ -35,12 +35,11 @@
 	display: grid;
 	grid-template-columns: 1fr;
 	font-family: var(--basic-font);
-	font-weight: 300;
+	font-weight: 100;
 	font-style: normal;
 	font-size: 25px;
 	text-align: right;
 	color: var(--always-white);
-	gap: 40px;
 }
 
 .footer__address-info {
@@ -63,7 +62,7 @@
 .footer__additional-info {
 	padding-top: 20px;
 	font-family: var(--basic-font);
-	font-weight: 300;
+	font-weight: 100;
 	font-size: 18px;
 	text-align: right;
 	color: var(--always-white);
