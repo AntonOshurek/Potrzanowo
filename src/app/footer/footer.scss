@@ -1,15 +1,16 @@
 @import '../styles/variables';
 
 .footer {
-	padding: 100px var(--standart-side-padding);
+	padding: 100px var(--standart-side-padding) 0 var(--standart-side-padding);
 	height: min-content;
+	grid-area: footer;
 }
 
 .footer__wrap {
 	display: flex;
 	flex-direction: column;
-	align-items: flex-end;
-	justify-content: flex-end;
+	align-items: center;
+	justify-content: center;
 
 	@media (max-width: $mobile-width) {
 		.footer__title,
@@ -25,7 +26,7 @@
 
 .footer__title {
 	font-family: var(--basic-font);
-	font-weight: 300;
+	font-weight: 100;
 	font-size: 25px;
 	text-align: right;
 	color: var(--always-white);
@@ -35,12 +36,11 @@
 	display: grid;
 	grid-template-columns: 1fr;
 	font-family: var(--basic-font);
-	font-weight: 300;
+	font-weight: 100;
 	font-style: normal;
 	font-size: 25px;
 	text-align: right;
 	color: var(--always-white);
-	gap: 40px;
 }
 
 .footer__address-info {
@@ -48,7 +48,7 @@
 
 .footer__address-links {
 	display: grid;
-	justify-items: flex-end;
+	justify-items: center;
 	grid-template-columns: 1fr;
 }
 
@@ -63,8 +63,8 @@
 .footer__additional-info {
 	padding-top: 20px;
 	font-family: var(--basic-font);
-	font-weight: 300;
+	font-weight: 100;
 	font-size: 18px;
-	text-align: right;
+	text-align: center;
 	color: var(--always-white);
 }
