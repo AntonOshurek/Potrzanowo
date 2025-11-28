@@ -2,6 +2,9 @@
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr min-content;
+	grid-template-areas:
+'footer'
+'contactform';
 	height: 100%;
 	min-height: 100%;
 	background-image: url('/images/investment/Potrzanowo_14.webp');
