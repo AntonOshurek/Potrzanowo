@@ -1,16 +1,18 @@
 ---
-import { getEntry } from 'astro:content';
 //STYLES
 import './main.scss';
 //COMPONENTS
 import TextBlock from '../../../shared/text-block/text-block.astro';
 import ImageBgBlock from '../../../shared/image-bg-block/image-bg-block.astro';
+//LIBS
+import { mustGetEntry } from '../../../shared/content/must-get-entry';
 
-//CONTENT
-const description = await getEntry('textBlocks', 'location-description');
-const banner = await getEntry('imageBlocks', 'lokalizacja-banner');
-const imageBgBlock9 = await getEntry('imageBlocks', 'potrzanowo-9');
-const imageBgBlock10 = await getEntry('imageBlocks', 'potrzanowo-10');
+const [description, banner, imageBgBlock9, imageBgBlock10] = await Promise.all([
+	mustGetEntry('textBlocks', 'location-description'),
+	mustGetEntry('imageBlocks', 'lokalizacja-banner'),
+	mustGetEntry('imageBlocks', 'potrzanowo-9'),
+	mustGetEntry('imageBlocks', 'potrzanowo-10'),
+]);
 ---
 
 <main class="main">

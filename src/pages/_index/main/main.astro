@@ -1,15 +1,17 @@
 ---
-import { getEntry } from 'astro:content';
 //STYLES
 import './main.scss';
 //COMPONENTS
 import IndexLink from '../index-link/index-link.astro';
+//LIBS
+import { mustGetEntry } from '../../../shared/content/must-get-entry';
 
-//CONTENT
-const investmentlink = await getEntry('indexPageLinks', 'index-link-to-investment');
-const investmentlink2 = await getEntry('indexPageLinks', 'index-link-to-investment-2');
-const locationlink = await getEntry('indexPageLinks', 'index-link-to-location');
-const activitylink = await getEntry('indexPageLinks', 'index-link-to-activity');
+const [investmentlink, investmentlink2, locationlink, activitylink] = await Promise.all([
+	mustGetEntry('indexPageLinks', 'index-link-to-investment'),
+	mustGetEntry('indexPageLinks', 'index-link-to-investment-2'),
+	mustGetEntry('indexPageLinks', 'index-link-to-location'),
+	mustGetEntry('indexPageLinks', 'index-link-to-activity'),
+]);
 ---
 
 <main class="main">

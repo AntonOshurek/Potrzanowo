@@ -1,23 +1,38 @@
 ---
-import { getEntry } from 'astro:content';
 //STYLES
 import './main.scss';
 //COMPONENTS
 import TextBlock from '../../../shared/text-block/text-block.astro';
 import ImageBgBlock from '../../../shared/image-bg-block/image-bg-block.astro';
 import InvestFilesTable from '../invest-files-table/invest-files-table.astro';
+//LIBS
+import { mustGetEntry } from '../../../shared/content/must-get-entry';
 
-//CONTENT
-const banner = await getEntry('imageBlocks', 'investment-banner');
-const description = await getEntry('textBlocks', 'investment-description');
-
-const imageBgBlock2 = await getEntry('imageBlocks', 'potrzanowo-2');
-const imageBgBlock3 = await getEntry('imageBlocks', 'potrzanowo-3');
-const imageBgBlock4 = await getEntry('imageBlocks', 'potrzanowo-4');
-const imageBgBlock6 = await getEntry('imageBlocks', 'potrzanowo-6');
-const imageBgBlock7 = await getEntry('imageBlocks', 'potrzanowo-7');
-const imageBgBlockProjection0 = await getEntry('imageBlocks', 'zrzut-0');
-const imageBgBlockProjection1 = await getEntry('imageBlocks', 'zrzut-1');
+const [
+	banner,
+	description,
+	imageBgBlock2,
+	imageBgBlock3,
+	imageBgBlock6,
+	imageBgBlock7,
+	view1,
+	view2,
+	view3,
+	imageBgBlockProjection0,
+	imageBgBlockProjection1,
+] = await Promise.all([
+	mustGetEntry('imageBlocks', 'investment-banner'),
+	mustGetEntry('textBlocks', 'investment-description'),
+	mustGetEntry('imageBlocks', 'potrzanowo-2'),
+	mustGetEntry('imageBlocks', 'potrzanowo-3'),
+	mustGetEntry('imageBlocks', 'potrzanowo-6'),
+	mustGetEntry('imageBlocks', 'potrzanowo-7'),
+	mustGetEntry('imageBlocks', 'widok-1'),
+	mustGetEntry('imageBlocks', 'widok-2'),
+	mustGetEntry('imageBlocks', 'widok-3'),
+	mustGetEntry('imageBlocks', 'zrzut-0'),
+	mustGetEntry('imageBlocks', 'zrzut-1'),
+]);
 ---
 
 <main class="main">
@@ -58,10 +73,23 @@ const imageBgBlockProjection1 = await getEntry('imageBlocks', 'zrzut-1');
 	</div>
 
 	<ImageBgBlock
-		imagePath={imageBgBlock4.data.imagePath}
-		alt={imageBgBlock4.data.imageAlt}
-		title={imageBgBlock4.data.blockTitle}
+		imagePath={view1.data.imagePath}
+		alt={view1.data.imageAlt}
+		title={view1.data.blockTitle}
 	/>
+
+	<ImageBgBlock
+		imagePath={view2.data.imagePath}
+		alt={view2.data.imageAlt}
+		title={view2.data.blockTitle}
+	/>
+
+	<ImageBgBlock
+		imagePath={view3.data.imagePath}
+		alt={view3.data.imageAlt}
+		title={view3.data.blockTitle}
+	/>
+
 
 	<ImageBgBlock
 		imagePath={imageBgBlock6.data.imagePath}
