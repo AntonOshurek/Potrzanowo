@@ -4,9 +4,9 @@ import { render } from 'astro:content';
 import './main.scss';
 //COMPONENTS
 import ImageBgBlock from '../../../shared/image-bg-block/image-bg-block.astro';
+//LIBS
 import { mustGetEntry } from '../../../shared/content/must-get-entry';
 
-//CONTENT
 const [PrivacyPolicy, imageBgBlock2] = await Promise.all([
 	mustGetEntry('privacypolicy', 'privacy-policy'),
 	mustGetEntry('imageBlocks', 'potrzanowo-2'),

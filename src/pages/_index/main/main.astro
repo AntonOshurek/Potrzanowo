@@ -3,9 +3,9 @@
 import './main.scss';
 //COMPONENTS
 import IndexLink from '../index-link/index-link.astro';
+//LIBS
 import { mustGetEntry } from '../../../shared/content/must-get-entry';
 
-//CONTENT
 const [investmentlink, investmentlink2, locationlink, activitylink] = await Promise.all([
 	mustGetEntry('indexPageLinks', 'index-link-to-investment'),
 	mustGetEntry('indexPageLinks', 'index-link-to-investment-2'),

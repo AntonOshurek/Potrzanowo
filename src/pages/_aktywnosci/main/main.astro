@@ -4,9 +4,9 @@ import './main.scss';
 //COMPONENTS
 import TextBlock from '../../../shared/text-block/text-block.astro';
 import ImageBgBlock from '../../../shared/image-bg-block/image-bg-block.astro';
+//LIBS
 import { mustGetEntry } from '../../../shared/content/must-get-entry';
 
-//CONTENTs
 const [banner, description, imageBgBlock12, imageBgBlock13] = await Promise.all([
 	mustGetEntry('imageBlocks', 'activity-banner'),
 	mustGetEntry('textBlocks', 'activity-description'),

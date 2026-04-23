@@ -2,6 +2,7 @@
 import { render } from 'astro:content';
 //STYLES
 import './invest-files-table.scss';
+//LIBS
 import { mustGetEntry } from '../../../shared/content/must-get-entry';
 
 const [Table] = await Promise.all([mustGetEntry('tables', 'files-table')]);
