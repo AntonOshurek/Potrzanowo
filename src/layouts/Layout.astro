@@ -1,6 +1,7 @@
 ---
 //COMPONENTS
 import Head from '../app/head/head.astro';
+import Header from '../app/header/header.astro';
 //STYLES
 import './layout.scss';
 import '../app/styles/global.scss';
@@ -19,6 +20,7 @@ const { title, description, image } = Astro.props;
 	<Head title={title} description={description} image={image} />
 
 	<body class="body">
+		<Header />
 		<slot />
 	</body>
 </html>
