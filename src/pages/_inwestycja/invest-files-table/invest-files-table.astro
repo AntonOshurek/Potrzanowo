@@ -3,7 +3,7 @@ import { getEntry } from 'astro:content';
 //STYLES
 import './invest-files-table.scss';
 
-const Table = await getEntry('tables', 'files-table');
+const Table = await getEntry('tables', 'files-table')!;
 
 const { Content } = await Table.render();
 ---

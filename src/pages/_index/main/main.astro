@@ -6,10 +6,10 @@ import './main.scss';
 import IndexLink from '../index-link/index-link.astro';
 
 //CONTENT
-const investmentlink = await getEntry('indexPageLinks', 'index-link-to-investment');
-const investmentlink2 = await getEntry('indexPageLinks', 'index-link-to-investment-2');
-const locationlink = await getEntry('indexPageLinks', 'index-link-to-location');
-const activitylink = await getEntry('indexPageLinks', 'index-link-to-activity');
+const investmentlink = await getEntry('indexPageLinks', 'index-link-to-investment')!;
+const investmentlink2 = await getEntry('indexPageLinks', 'index-link-to-investment-2')!;
+const locationlink = await getEntry('indexPageLinks', 'index-link-to-location')!;
+const activitylink = await getEntry('indexPageLinks', 'index-link-to-activity')!;
 ---
 
 <main class="main">

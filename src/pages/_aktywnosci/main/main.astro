@@ -7,10 +7,10 @@ import TextBlock from '../../../shared/text-block/text-block.astro';
 import ImageBgBlock from '../../../shared/image-bg-block/image-bg-block.astro';
 
 //CONTENTs
-const banner = await getEntry('imageBlocks', 'activity-banner');
-const description = await getEntry('textBlocks', 'activity-description');
-const imageBgBlock12 = await getEntry('imageBlocks', 'potrzanowo-12');
-const imageBgBlock13 = await getEntry('imageBlocks', 'potrzanowo-13');
+const banner = await getEntry('imageBlocks', 'activity-banner')!;
+const description = await getEntry('textBlocks', 'activity-description')!;
+const imageBgBlock12 = await getEntry('imageBlocks', 'potrzanowo-12')!;
+const imageBgBlock13 = await getEntry('imageBlocks', 'potrzanowo-13')!;
 ---
 
 <main class="main">

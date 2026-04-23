@@ -6,9 +6,9 @@ import './main.scss';
 import ImageBgBlock from '../../../shared/image-bg-block/image-bg-block.astro';
 
 //CONTENT
-const PrivacyPolicy = await getEntry('privacypolicy', 'privacy-policy');
+const PrivacyPolicy = await getEntry('privacypolicy', 'privacy-policy')!;
 const { Content } = await PrivacyPolicy.render();
-const imageBgBlock2 = await getEntry('imageBlocks', 'potrzanowo-2');
+const imageBgBlock2 = await getEntry('imageBlocks', 'potrzanowo-2')!;
 ---
 
 <main class="main">
