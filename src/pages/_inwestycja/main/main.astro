@@ -13,9 +13,11 @@ const description = await getEntry('textBlocks', 'investment-description');
 
 const imageBgBlock2 = await getEntry('imageBlocks', 'potrzanowo-2');
 const imageBgBlock3 = await getEntry('imageBlocks', 'potrzanowo-3');
-const imageBgBlock4 = await getEntry('imageBlocks', 'potrzanowo-4');
 const imageBgBlock6 = await getEntry('imageBlocks', 'potrzanowo-6');
 const imageBgBlock7 = await getEntry('imageBlocks', 'potrzanowo-7');
+const view1 = await getEntry('imageBlocks', 'widok-1');
+const view2 = await getEntry('imageBlocks', 'widok-2');
+const view3 = await getEntry('imageBlocks', 'widok-3');
 const imageBgBlockProjection0 = await getEntry('imageBlocks', 'zrzut-0');
 const imageBgBlockProjection1 = await getEntry('imageBlocks', 'zrzut-1');
 ---
@@ -58,10 +60,23 @@ const imageBgBlockProjection1 = await getEntry('imageBlocks', 'zrzut-1');
 	</div>
 
 	<ImageBgBlock
-		imagePath={imageBgBlock4.data.imagePath}
-		alt={imageBgBlock4.data.imageAlt}
-		title={imageBgBlock4.data.blockTitle}
+		imagePath={view1.data.imagePath}
+		alt={view1.data.imageAlt}
+		title={view1.data.blockTitle}
 	/>
+
+	<ImageBgBlock
+		imagePath={view2.data.imagePath}
+		alt={view2.data.imageAlt}
+		title={view2.data.blockTitle}
+	/>
+
+	<ImageBgBlock
+		imagePath={view3.data.imagePath}
+		alt={view3.data.imageAlt}
+		title={view3.data.blockTitle}
+	/>
+
 
 	<ImageBgBlock
 		imagePath={imageBgBlock6.data.imagePath}
