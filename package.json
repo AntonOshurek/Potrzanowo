@@ -2,6 +2,9 @@
 	"name": "potrzanowo.pl",
 	"type": "module",
 	"version": "1.0.2",
+	"engines": {
+		"node": ">=22.12.0"
+	},
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",
@@ -10,10 +13,10 @@
 		"astro": "astro"
 	},
 	"dependencies": {
-		"@astrojs/check": "^0.9.6",
-		"@astrojs/mdx": "^4.3.13",
-		"@astrojs/sitemap": "^3.6.0",
-		"astro": "^5.16.5",
+		"@astrojs/check": "^0.9.8",
+		"@astrojs/mdx": "^5.0.4",
+		"@astrojs/sitemap": "^3.7.2",
+		"astro": "^6.1.9",
 		"prettier": "^3.3.2",
 		"prettier-plugin-astro": "^0.14.0",
 		"sass": "^1.77.5",
